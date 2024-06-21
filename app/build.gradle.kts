@@ -1,6 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("org.sonarqube") version "4.4.1.3373"
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "Deluwuta_pruebasv2")
+        property("sonar.organization", "deluwuta")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
 }
 
 android {
